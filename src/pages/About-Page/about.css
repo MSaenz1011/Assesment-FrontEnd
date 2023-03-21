@@ -4,6 +4,9 @@
     text-align: center;
 }
 
+h3{
+    font-size: 15px;
+}
 
 li{
     list-style: none;
@@ -46,7 +49,7 @@ ul{
 
 .box:hover {
     box-shadow: 1px 8px 20px grey;
-    -webkit-transition: box-shadow .6s ease-in;
+    transition: box-shadow .6s ease-in;
 }
 
 

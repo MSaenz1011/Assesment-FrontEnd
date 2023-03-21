@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div>
       <h1>Hey,hey, people</h1>
-      <p>My name is Michael and I will tell you more about me</p>
+      <h3>My name is Michael and I will tell you more about me</h3>
 
       <section className='wrapper'>
         <div className='box container-1'>
@@ -29,8 +29,11 @@ export default function About() {
               I still need more practice:
             </p>
             <ul>
-              <li>React (even though I need more practice on Redux) </li>
-              <li>Better CSS Practices and styles</li>
+              <li>React (Even though I need more practice on Redux) </li>
+              <li>
+                Better CSS practices and styles, learning SASS for better style
+                aplications
+              </li>
               <li>Bootsrap (Not used in this project for my own sake)</li>
               <li>Javascript and its features: Jest, ES6+,etc.</li>
             </ul>
