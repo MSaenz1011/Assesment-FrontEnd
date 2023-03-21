@@ -1,0 +1,53 @@
+/*Styles to single tags*/
+
+*{
+    text-align: center;
+}
+
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 80%;
+}
+
+body{
+    background-color:#d4d4dc
+    
+}
+
+ul{
+    padding: 0;
+}
+
+.wrapper{
+    display: flex;
+    width: 95%;
+    gap: 30px;
+    padding-left: 2%;
+    margin-top: 5%;
+}
+
+
+.box{
+    flex-grow: 1;
+    padding: 16px;
+    background-color: white;
+    width: 50%;
+}
+
+.box .text{
+    flex-direction: column;
+    display: flex;  
+    margin-top: 10%;
+}
+
+.box:hover {
+    box-shadow: 1px 8px 20px grey;
+    -webkit-transition: box-shadow .6s ease-in;
+}
+
+
+
