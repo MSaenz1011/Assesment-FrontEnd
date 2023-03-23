@@ -8,7 +8,14 @@ export default function Home() {
 
   useEffect(() => {
     const URL = "https://fakestoreapi.com/products";
-    axios.get(URL).then((res) => setProducts(res.data.results));
+    axios
+      .get(URL)
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   return (
@@ -23,7 +30,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ProductCard product={products} />
+
+      <div className='container'>
+        {products.map((product) => {
+          const { id, title, image } = product;
+
+          return <ProductCard key={id} image={image} title={title} />;
+        })}
+      </div>
     </>
   );
 }

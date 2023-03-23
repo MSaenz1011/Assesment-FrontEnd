@@ -1,0 +1,28 @@
+.vessel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.detail-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 350px;
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 20px 15px
+}
+
+.product-img img{
+    width: 30%;
+    mix-blend-mode: multiply;
+}
+
+.product-rating{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
