@@ -4,10 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/About-Page/About";
 import Home from "./pages/Home-Page/Home";
 import ProductDetail from "./pages/ProductDetail-Page/ProductDetail";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className='App'>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
