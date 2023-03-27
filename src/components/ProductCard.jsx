@@ -49,7 +49,7 @@ export default function ProductCard({ id, title, image }) {
             </button>
           ) : (
             <button className='btn-active' type='submit'>
-              View Details
+              Get Product Details
             </button>
           )}
         </Link>

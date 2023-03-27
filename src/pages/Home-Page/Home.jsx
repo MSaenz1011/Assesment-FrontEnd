@@ -38,7 +38,7 @@ export default function Home() {
         {products.map((product) => {
           const { id, title, image } = product;
 
-          return <ProductCard key={id} image={image} title={title} />;
+          return <ProductCard key={id} id={id} image={image} title={title} />;
         })}
       </div>
     </>
