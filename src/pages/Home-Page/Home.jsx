@@ -26,7 +26,10 @@ export default function Home() {
             <h2>You Better Flip Me</h2>
           </div>
           <div class='flip-card-back'>
-            <h2>Check the products before the timer ends</h2>
+            <h2>
+              Check the products before the timer ends. Keep in mind the timer
+              (which is random)
+            </h2>
           </div>
         </div>
       </div>

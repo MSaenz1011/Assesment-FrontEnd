@@ -29,12 +29,12 @@ export default function About() {
               I still need more practice:
             </p>
             <ul>
-              <li>React (Even though I need more practice on Redux) </li>
+              <li>React (Even though I need way more practice on Redux) </li>
               <li>
                 Better CSS practices and styles, learning SASS for better style
                 aplications
               </li>
-              <li>Bootsrap (Not used in this project for my own sake)</li>
+              <li>Bootstrap (Not used in this project for my own sake)</li>
               <li>Javascript and its features: Jest, ES6+,etc.</li>
             </ul>
           </div>

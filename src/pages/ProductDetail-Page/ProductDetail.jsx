@@ -31,7 +31,7 @@ export default function ProductDetail() {
           <p className=''>{description}</p>
           <div className='product-rating'>
             <h2>Rating</h2>
-            <strong>No Idea</strong>
+            <strong>{rating?.rate}</strong>
           </div>
         </div>
       </div>
