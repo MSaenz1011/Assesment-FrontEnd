@@ -34,13 +34,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='container'>
-        {products.map((product) => {
-          const { id, title, image } = product;
+      {products.length ? (
+        <div className='container'>
+          {products.map((product) => {
+            const { id, title, image } = product;
 
-          return <ProductCard key={id} id={id} image={image} title={title} />;
-        })}
-      </div>
+            return <ProductCard key={id} id={id} image={image} title={title} />;
+          })}
+        </div>
+      ) : (
+        <div class='dots-bars-2'></div>
+      )}
     </>
   );
 }

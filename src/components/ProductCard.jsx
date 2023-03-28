@@ -3,29 +3,27 @@ import { Link } from "react-router-dom";
 import "./productcard.css";
 
 export default function ProductCard({ id, title, image }) {
-  const [timer, setTimer] = useState({
-    minutes: Math.floor(Math.random() * 3),
-    seconds: Math.floor(Math.random() * 59),
-  });
+  const [timeLeft, setTimeLeft] = useState(Math.floor(Math.random() * 60) + 40);
+  const [timerEnded, setTimerEnded] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prevCountdown) => {
-        const seconds = prevCountdown.seconds - 1;
-        const minutes = prevCountdown.minutes - (seconds < 0 ? 1 : 0);
-
-        return {
-          minutes: minutes < 0 ? 0 : minutes,
-          seconds: seconds < 0 ? 0 : seconds,
-        };
-      });
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => prevTime - 1);
     }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+    if (timeLeft === 0) {
+      clearInterval(timer);
+      setTimerEnded(true);
+    }
 
-  const { minutes, seconds } = timer;
-  const isExpired = minutes === 0 && seconds === 0;
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
+  function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
 
   return (
     <article className='card'>
@@ -37,13 +35,9 @@ export default function ProductCard({ id, title, image }) {
       </div>
 
       <div className='timer'>
-        <p>
-          {`${minutes.toString().padStart(2, "0")}:${seconds
-            .toString()
-            .padStart(2, "0")}`}
-        </p>
+        <p>{formatTime(timeLeft)}</p>
         <Link to={`/products/${id}`}>
-          {isExpired ? (
+          {timerEnded ? (
             <button className='btn-disable' type='submit' disabled>
               Time's Up
             </button>

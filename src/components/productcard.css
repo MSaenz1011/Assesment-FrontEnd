@@ -23,3 +23,39 @@
 .card .card-image img{
     width: 40%;
 }
+
+.btn-disable{
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-5);
+    color: white;
+    background: darkred;
+    border: 0;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+}
+
+.btn-active{
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-5);
+    color: white;
+    background: black;
+    border: 0;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+    }
+    
+.btn-active:hover {
+    --y: -10;
+    --scale: 1.1;
+    --border-scale: 1;
+    }
+
+    
+.btn-active:active {
+    --y: 5%;
+    --scale: 0.9;
+    --border-scale: 0.9, 0.8;
+    }
+    
