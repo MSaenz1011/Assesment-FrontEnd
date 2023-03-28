@@ -19,7 +19,6 @@ export default function ProductDetail() {
   }, [id]);
 
   const { title, image, description, rating } = product;
-  console.log(typeof rating?.rate);
 
   return (
     <React.Fragment>
