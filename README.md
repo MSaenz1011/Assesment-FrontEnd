@@ -1,3 +1,7 @@
+Previo a las respuestas, quiero agradecer esto a mis mentores: Sergio Jaramillo y Cristian Buitrago. Además, también agradezco mucho, pero mucho a mis compañeros Andrés Vélez y Oscar Nuñez.
+
+Sin ustedes, no creo que el proyecto esté en este estado
+
 Respuesta a las preguntas:
 
 1. ¿Cuáles son las ceremonias más importantes de un Sprint y cuál es la idea de cada una?
@@ -61,3 +65,47 @@ al DOM real y solo se actualice las partes que deseamos o requerimos
 Respuesta:
 -git checkout rama-1 (crea la rama y nos dirige a ella)
 -git branch rama-1 (crea la rama desde el main)
+
+8. Código CSS:
+
+   .c-services {
+   box-sizing: border-box;
+   display: grid;
+   grid-template-columns: 49% 49%;
+   gap: 1rem;
+   width: 100%;
+   list-style-type: none;
+   justify-content: space-between;
+   padding: 0;
+   }
+
+   .c-section\_\_title {
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 1.5rem 0;
+   border-top: 15px solid #B7B7B7;
+   }
+
+   .c-services\_\_item{
+   background-color: #F8F8FF;
+   padding: 1.2rem;
+   box-sizing:border-box;
+   }
+
+   .c-services\_\_item:hover{
+   box-shadow: 0 4px 4px rgba(5,0,0,0.3)
+   }
+
+   .c-section h3{
+   padding-left: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 1.5;
+   }
+
+   .c-section p{
+   padding-left: 1rem;
+   line-height: 1.4rem;
+   }
